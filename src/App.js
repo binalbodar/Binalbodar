@@ -40,11 +40,73 @@ function App() {
   // let arr =[10,20,30,40,50];
   // arr.map((a ,i) => console.log(a));
 
-  let intro = () =>{
-    console.log("binal bodar")
-  }
-  intro();
+  // let intro = () =>{
+  //   console.log("Binal Bodar")
+  // }
+  // intro();
+
+  //array
+  // let arr = [10,"Binal",20,30,40,50];
+  // console.log(arr[4]);
+
+  //object
+  // let obj={
+  //   id:10,
+  //   age:20,
+  //   per:30
+  // }
+  // console.log(obj.per,obj["id"]);
+
+  //push
+  // let arr=[10,"Binal",20,30,40,50];
+  // arr.push(99);
+  // console.log(arr);
   
+  //unShift
+  // let arr=[10,"Binal",20,30,40,50];
+  // arr.unshift(99);
+  // console.log(arr);
+
+  //pop
+  // let arr=[10,"Binal",20,30,40,50];
+  // arr.pop();
+  // console.log(arr);
+
+  //shift
+  // let arr=[10,"Binal",20,30,40,50];
+  // arr.shift();
+  // console.log(arr);
+
+  //splice
+  // let arr=[10,"Binal",20,30,40,50];
+  // arr.splice(3,0,99);//Add element at specific position
+  // console.log(arr);
+
+  //splice
+  // let arr=[10,"Binal",20,30,40,50];
+  // arr .splice(2,1);
+  // console.log(arr);
+
+  //ToString
+  // let arr=[10,"Binal",20,30,40,50];
+  // console.log(arr.toString());
+
+  //some
+  // let arr=[10,"Binal",20,30,40,50];
+  // let res=arr.some((a)=>a>100)//10
+  // console.log(res);
+
+  //find
+  // let arr=[10,"Binal",20,30,40,50];
+  // let res=arr.find((a)=>a>10);
+  // console.log(res);
+
+  //isArray
+  // let arr=10;
+  let arr=[10,"Binal",20,30,40,50];
+  let res=Array.isArray(arr);
+  console.log(res);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -58,7 +120,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Binal Bodar
         </a>
       </header>
     </div>
