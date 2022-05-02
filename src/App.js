@@ -159,32 +159,101 @@ function App() {
 
   //reduse Employee
   // let array1=[4000,38000,5000,35000,22000];//salary
-  let array1=[1000,2000,500,600,2000];//bonus
-  let ini=0;
-  let sum=array1.reduce(
-    (pre,cur)=>pre+cur,
-    ini
-  );
-  console.log(sum);
+  // let array1=[1000,2000,500,600,2000];//bonus
+  // let ini=0;
+  // let sum=array1.reduce(
+  //   (pre,cur)=>pre+cur,
+  //   ini
+  // );
+  // console.log(sum);
 
+  const data = [
+    {
+      id: 101,
+      name: 'Abacavir',
+      quantity: 25,
+      price: 150,
+      expiry: 2022,
+      status: true
+    },
+    {
+      id: 102,
+      name: 'Eltrombopag',
+      quantity: 90,
+      price: 550,
+      expiry: 2021,
+      status: true
+    },
+    {
+      id: 103,
+      name: 'Meloxicam',
+      quantity: 85,
+      price: 450,
+      expiry: 2025,
+      status: false
+    },
+    {
+      id: 104,
+      name: 'Allopurinol',
+      quantity: 50,
+      price: 600,
+      expiry: 2023,
+      status: true
+    },
+    {
+      id: 105,
+      name: 'Phenytoin',
+      quantity: 63,
+      price: 250,
+      expiry: 2021,
+      status: false
+    }
+  ];
+
+  //map
+  data.map((value, index) => console.log(value.id, value.name));
+
+  //filter
+  let filterData = data.filter((d, i) => d.expiry >=2022);
+  console.log(filterData);
+
+  //reduce
+  let ans = filterData.reduce((acc, d, i)=>acc+d.price,0);
+  console.log(ans);
+
+  //filter&reduce
+  let abc=data
+  .filter((d, i)=>d.expiry>=2022)
+  .reduce((acc, d, i)=>acc+d.price,0);
+  console.log(abc);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Binal Bodar
-        </a>
-      </header>
-    </div>
+    <>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>quantity</th>
+        <th>price</th>
+        <th>expiry</th>
+        <th>total</th>
+        <th rowspan="5">1200</th>
+      </tr>
+      {
+        data.map((value, index)=>{
+          return(
+            <tr>
+              <td>{value.id}</td>
+              <td>{value.name}</td>
+              <td>{value.quantity}</td>
+              <td>{value.price}</td>
+              <td>{value.expiry}</td>
+            </tr>
+          )
+        })
+      }
+    </table>
+    </>
   );
 }
 
