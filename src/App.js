@@ -167,77 +167,120 @@ function App() {
   // );
   // console.log(sum);
 
-  const data = [
-    {
-      id: 101,
-      name: 'Abacavir',
-      quantity: 25,
-      price: 150,
-      expiry: 2022,
-      status: true
-    },
-    {
-      id: 102,
-      name: 'Eltrombopag',
-      quantity: 90,
-      price: 550,
-      expiry: 2021,
-      status: true
-    },
-    {
-      id: 103,
-      name: 'Meloxicam',
-      quantity: 85,
-      price: 450,
-      expiry: 2025,
-      status: false
-    },
-    {
-      id: 104,
-      name: 'Allopurinol',
-      quantity: 50,
-      price: 600,
-      expiry: 2023,
-      status: true
-    },
-    {
-      id: 105,
-      name: 'Phenytoin',
-      quantity: 63,
-      price: 250,
-      expiry: 2021,
-      status: false
-    }
-  ];
+  // const data = [
+  //   {
+  //     id: 101,
+  //     name: 'Abacavir',
+  //     quantity: 25,
+  //     price: 150,
+  //     expiry: 2022,
+  //     status: true
+  //   },
+  //   {
+  //     id: 102,
+  //     name: 'Eltrombopag',
+  //     quantity: 90,
+  //     price: 550,
+  //     expiry: 2021,
+  //     status: true
+  //   },
+  //   {
+  //     id: 103,
+  //     name: 'Meloxicam',
+  //     quantity: 85,
+  //     price: 450,
+  //     expiry: 2025,
+  //     status: false
+  //   },
+  //   {
+  //     id: 104,
+  //     name: 'Allopurinol',
+  //     quantity: 50,
+  //     price: 600,
+  //     expiry: 2023,
+  //     status: true
+  //   },
+  //   {
+  //     id: 105,
+  //     name: 'Phenytoin',
+  //     quantity: 63,
+  //     price: 250,
+  //     expiry: 2021,
+  //     status: false
+  //   }
+  // ];
 
-  //map
-  data.map((value, index) => console.log(value.id, value.name));
+  // //map
+  // data.map((value, index) => console.log(value.id, value.name));
 
-  //filter
-  let filterData = data.filter((d, i) => d.expiry >=2022);
-  console.log(filterData);
+  // //filter
+  // let filterData = data.filter((d, i) => d.expiry >=2022);
+  // console.log(filterData);
 
-  //reduce
-  let ans = filterData.reduce((acc, d, i)=>acc+d.price,0);
-  console.log(ans);
+  // //reduce
+  // let ans = filterData.reduce((acc, d, i)=>acc+d.price,0);
+  // console.log(ans);
 
-  //filter&reduce
-  let abc=data
-  .filter((d, i)=>d.expiry>=2022)
-  .reduce((acc, d, i)=>acc+d.price,0);
-  console.log(abc);
+  // //filter&reduce
+  // let abc=data
+  // .filter((d, i)=>d.expiry>=2022)
+  // .reduce((acc, d, i)=>acc+d.price,0);
+  // console.log(abc);
+
+  //arrat start
+
+  //let arr=[10,20,30,40,50];
+
+  //copy
+  // let arr1=[...arr];
+  // console.log(arr1);
+
+  // //merge
+  // let arr2=[99,...arr,100];
+  // console.log(arr2);
+
+  // //destructure
+  // let [maths,eng,guj,ss,sci]=arr;
+  // console.log(guj);
+
+  //array end
+
+  //object start
+
+  let obj={
+    id:101,
+    name:"Mansi"
+  };
+
+  //copy
+  let obj1={...obj};
+  console.log(obj1);
+
+  //marge
+
+  let obj2 ={
+    ...obj,
+    place:"surat",
+    name: "binal"
+  };
+  console.log(obj2);
+
+  //destructure
+  let{id,name}=obj;
+  console.log(id,name);
+
+  //object end
 
   return (
     <>
-    <table>
+    {/* <table border="1">
       <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>quantity</th>
-        <th>price</th>
-        <th>expiry</th>
-        <th>total</th>
-        <th rowspan="5">1200</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Expiry</th>
+        <th>Total</th>
       </tr>
       {
         data.map((value, index)=>{
@@ -248,11 +291,13 @@ function App() {
               <td>{value.quantity}</td>
               <td>{value.price}</td>
               <td>{value.expiry}</td>
+              {index === 0 ? <td rowspan={data.length}>{abc}</td>:null}
             </tr>
           )
         })
       }
-    </table>
+    </table> */}
+
     </>
   );
 }
