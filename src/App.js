@@ -8,18 +8,38 @@ import Branch from './Container/Country/Branch';
 import Time from './Container/Country/Time/Time';
 import TimeFun from './Container/Country/Time/TimeFun';
 
+import React, { useEffect, useState } from 'react';
+import Loading from './Componets/Loading/Loading';
+import Home from './Container/Country/Home/Home';
+const HomeWithLoding=Loading(Home)
 function App() {
+  const [loading, setLoading]=useState(false);
+  const [data, setData]=useState([]);
 
+  let orgData=[
+    {id:101, name:"Mansi"},
+    {id:102, name:"Binal"},
+    {id:103, name:"Janki"}
+  ]
+
+  useEffect(
+    ()=>{
+      setLoading(true);
+      setTimeout(()=>{setLoading(false);setData(orgData)},2000);
+    },
+  [])
+
+  console.log(loading, data);
   return (
-    <>
-    {/* <Country/> */}
-    {/* <City/> */}
-    {/* <Countryfun gdpval={9.5}/> */}
-    {/* <Cityfun/> */}
-    {/* <Branch/> */}
-    {/* <Time/> */}
-    <TimeFun/>
-    </>
+    <div>
+      <>
+      <HomeWithLoding 
+      isLoading={loading}
+      data={data}
+      />
+      </>
+      
+    </div>
   );
 }
 

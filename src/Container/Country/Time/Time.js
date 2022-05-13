@@ -24,7 +24,7 @@ class Time extends Component {
     componentDidUpdate=(prevProps,prevState)=>{
         //4. Call componentDidUpdate when previos state and current state is not same.
         if(prevState.time!==this.state.time){
-            console.log("componemtDidUpdate Called");
+            console.log("componentDidUpdate Called");
         }
     }
 
