@@ -7,13 +7,7 @@ import Cityfun from './Container/Country/Cityfun';
 import Branch from './Container/Country/Branch';
 import Time from './Container/Country/Time/Time';
 import TimeFun from './Container/Country/Time/TimeFun';
-{/* <Country/> */}
-{/* <City/> */}
-{/* <Countryfun/> */}
-{/* <Cityfun/> */}
-{/* <Branch/> */}
-{/* <Time/> */}
-{/* <TimeFun/> */}
+
 
 import React, { useEffect, useState } from 'react';
 import Loading from './Componets/Loading/Loading';
@@ -51,3 +45,13 @@ function App() {
 }
 
 export default App;
+
+
+//File atechment
+{/* <Country/> */}
+{/* <City/> */}
+{/* <Countryfun/> */}
+{/* <Cityfun/> */}
+{/* <Branch/> */}
+{/* <Time/> */}
+{/* <TimeFun/> */}
